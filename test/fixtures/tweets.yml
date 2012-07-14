@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_id: 1
+  text: MyText
+  scheduled_at: 2012-06-27 17:55:59
+  sent: false
+
+two:
+  user_id: 1
+  text: MyText
+  scheduled_at: 2012-06-27 17:55:59
+  sent: false
