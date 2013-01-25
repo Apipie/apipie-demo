@@ -37,7 +37,7 @@
 
       <div>
           <h4>
-              GET /users/:user_id/tweets
+              GET /api/v2/users/:user_id/tweets
             <br>
             <small>List tweets</small>
           </h4>
@@ -50,12 +50,12 @@
 200
 [
   {
-    &quot;created_at&quot;: &quot;2013-01-25T21:39:37Z&quot;,
+    &quot;created_at&quot;: &quot;2013-01-25T21:44:16Z&quot;,
     &quot;id&quot;: 980190962,
     &quot;scheduled_at&quot;: &quot;2012-06-27T17:55:59Z&quot;,
     &quot;sent&quot;: false,
     &quot;text&quot;: &quot;MyText&quot;,
-    &quot;updated_at&quot;: &quot;2013-01-25T21:39:38Z&quot;,
+    &quot;updated_at&quot;: &quot;2013-01-25T21:44:17Z&quot;,
     &quot;user_id&quot;: 980190962
   }
 ]</pre>
@@ -70,7 +70,7 @@
 
       <div>
           <h4>
-              GET /users/:user_id/tweets/:id
+              GET /api/v2/users/:user_id/tweets/:id
             <br>
             <small>Show a tweet</small>
           </h4>
@@ -82,12 +82,12 @@
             <pre class="wiki">GET /users/980190962/tweets/980190962
 200
 {
-  &quot;created_at&quot;: &quot;2013-01-25T21:39:37Z&quot;,
+  &quot;created_at&quot;: &quot;2013-01-25T21:44:16Z&quot;,
   &quot;id&quot;: 980190962,
   &quot;scheduled_at&quot;: &quot;2012-06-27T17:55:59Z&quot;,
   &quot;sent&quot;: false,
   &quot;text&quot;: &quot;MyText&quot;,
-  &quot;updated_at&quot;: &quot;2013-01-25T21:39:38Z&quot;,
+  &quot;updated_at&quot;: &quot;2013-01-25T21:44:17Z&quot;,
   &quot;user_id&quot;: 980190962
 }</pre>
 
@@ -101,7 +101,7 @@
 
       <div>
           <h4>
-              POST /users/:user_id/tweets
+              POST /api/v2/users/:user_id/tweets
             <br>
             <small>Create a tweet</small>
           </h4>
@@ -121,12 +121,12 @@
 }
 201
 {
-  &quot;created_at&quot;: &quot;2013-01-25T21:39:38Z&quot;,
+  &quot;created_at&quot;: &quot;2013-01-25T21:44:17Z&quot;,
   &quot;id&quot;: 980190963,
   &quot;scheduled_at&quot;: &quot;2012-06-27T17:55:59Z&quot;,
   &quot;sent&quot;: false,
   &quot;text&quot;: &quot;MyText&quot;,
-  &quot;updated_at&quot;: &quot;2013-01-25T21:39:38Z&quot;,
+  &quot;updated_at&quot;: &quot;2013-01-25T21:44:17Z&quot;,
   &quot;user_id&quot;: 980190962
 }</pre>
 
@@ -194,7 +194,7 @@
 
       <div>
           <h4>
-              PUT /users/:user_id/tweets/:id
+              PUT /api/v2/users/:user_id/tweets/:id
             <br>
             <small>Update a tweet</small>
           </h4>
@@ -278,7 +278,7 @@
 
       <div>
           <h4>
-              DELETE /users/:user_id/tweets/:id
+              DELETE /api/v2/users/:user_id/tweets/:id
             <br>
             <small>Destroy a tweet</small>
           </h4>
@@ -314,7 +314,7 @@
 
       <div>
           <h4>
-              GET /users
+              GET /api/v2/users
             <br>
             <small>List users</small>
           </h4>
@@ -327,16 +327,16 @@
 200
 [
   {
-    &quot;created_at&quot;: &quot;2013-01-25T21:39:37Z&quot;,
+    &quot;created_at&quot;: &quot;2013-01-25T21:44:16Z&quot;,
     &quot;id&quot;: 298486374,
     &quot;name&quot;: &quot;MyString&quot;,
-    &quot;updated_at&quot;: &quot;2013-01-25T21:39:37Z&quot;
+    &quot;updated_at&quot;: &quot;2013-01-25T21:44:16Z&quot;
   },
   {
-    &quot;created_at&quot;: &quot;2013-01-25T21:39:37Z&quot;,
+    &quot;created_at&quot;: &quot;2013-01-25T21:44:16Z&quot;,
     &quot;id&quot;: 980190962,
     &quot;name&quot;: &quot;MyString&quot;,
-    &quot;updated_at&quot;: &quot;2013-01-25T21:39:37Z&quot;
+    &quot;updated_at&quot;: &quot;2013-01-25T21:44:16Z&quot;
   }
 ]</pre>
 
@@ -350,7 +350,7 @@
 
       <div>
           <h4>
-              GET /users/:id
+              GET /api/v2/users/:id
             <br>
             <small>Show an user</small>
           </h4>
@@ -362,10 +362,10 @@
             <pre class="wiki">GET /users/980190962
 200
 {
-  &quot;created_at&quot;: &quot;2013-01-25T21:39:37Z&quot;,
+  &quot;created_at&quot;: &quot;2013-01-25T21:44:16Z&quot;,
   &quot;id&quot;: 980190962,
   &quot;name&quot;: &quot;MyString&quot;,
-  &quot;updated_at&quot;: &quot;2013-01-25T21:39:37Z&quot;
+  &quot;updated_at&quot;: &quot;2013-01-25T21:44:16Z&quot;
 }</pre>
 
 
@@ -378,7 +378,7 @@
 
       <div>
           <h4>
-              POST /users
+              POST /api/v2/users
             <br>
             <small>Create an user</small>
           </h4>
@@ -395,10 +395,10 @@
 }
 201
 {
-  &quot;created_at&quot;: &quot;2013-01-25T21:39:38Z&quot;,
+  &quot;created_at&quot;: &quot;2013-01-25T21:44:17Z&quot;,
   &quot;id&quot;: 980190963,
   &quot;name&quot;: &quot;MyString&quot;,
-  &quot;updated_at&quot;: &quot;2013-01-25T21:39:38Z&quot;
+  &quot;updated_at&quot;: &quot;2013-01-25T21:44:17Z&quot;
 }</pre>
 
 
@@ -436,7 +436,7 @@
 
       <div>
           <h4>
-              PUT /users/:id
+              PUT /api/v2/users/:id
             <br>
             <small>Update an user</small>
           </h4>
@@ -488,7 +488,7 @@
 
       <div>
           <h4>
-              DELETE /users/:id
+              DELETE /api/v2/users/:id
             <br>
             <small>Destroy an user</small>
           </h4>

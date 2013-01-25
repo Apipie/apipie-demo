@@ -18,7 +18,7 @@
       <div id='container'>
         <ul class='breadcrumb'>
   <li>
-    <a href='../apidoc.html'>Demo 1.0</a>
+    <a href='../apidoc.html'>Demo 2</a>
     <span class='divider'>/</span>
   </li>
   <li class='active'>
@@ -49,7 +49,7 @@
            class='accordion-toggle'
            data-toggle='collapse'
            data-parent='#accordion'>
-            GET /users
+            GET /api/v2/users
           </a><br>
           <small>List users</small>
         </h2>
@@ -66,16 +66,16 @@
 200
 [
   {
-    &quot;created_at&quot;: &quot;2013-01-25T21:39:37Z&quot;,
+    &quot;created_at&quot;: &quot;2013-01-25T21:44:16Z&quot;,
     &quot;id&quot;: 298486374,
     &quot;name&quot;: &quot;MyString&quot;,
-    &quot;updated_at&quot;: &quot;2013-01-25T21:39:37Z&quot;
+    &quot;updated_at&quot;: &quot;2013-01-25T21:44:16Z&quot;
   },
   {
-    &quot;created_at&quot;: &quot;2013-01-25T21:39:37Z&quot;,
+    &quot;created_at&quot;: &quot;2013-01-25T21:44:16Z&quot;,
     &quot;id&quot;: 980190962,
     &quot;name&quot;: &quot;MyString&quot;,
-    &quot;updated_at&quot;: &quot;2013-01-25T21:39:37Z&quot;
+    &quot;updated_at&quot;: &quot;2013-01-25T21:44:16Z&quot;
   }
 ]</pre>
 
@@ -90,7 +90,7 @@
            class='accordion-toggle'
            data-toggle='collapse'
            data-parent='#accordion'>
-            GET /users/:id
+            GET /api/v2/users/:id
           </a><br>
           <small>Show an user</small>
         </h2>
@@ -106,10 +106,10 @@
           <pre class="prettyprint">GET /users/980190962
 200
 {
-  &quot;created_at&quot;: &quot;2013-01-25T21:39:37Z&quot;,
+  &quot;created_at&quot;: &quot;2013-01-25T21:44:16Z&quot;,
   &quot;id&quot;: 980190962,
   &quot;name&quot;: &quot;MyString&quot;,
-  &quot;updated_at&quot;: &quot;2013-01-25T21:39:37Z&quot;
+  &quot;updated_at&quot;: &quot;2013-01-25T21:44:16Z&quot;
 }</pre>
 
     </div>
@@ -123,7 +123,7 @@
            class='accordion-toggle'
            data-toggle='collapse'
            data-parent='#accordion'>
-            POST /users
+            POST /api/v2/users
           </a><br>
           <small>Create an user</small>
         </h2>
@@ -144,10 +144,10 @@
 }
 201
 {
-  &quot;created_at&quot;: &quot;2013-01-25T21:39:38Z&quot;,
+  &quot;created_at&quot;: &quot;2013-01-25T21:44:17Z&quot;,
   &quot;id&quot;: 980190963,
   &quot;name&quot;: &quot;MyString&quot;,
-  &quot;updated_at&quot;: &quot;2013-01-25T21:39:38Z&quot;
+  &quot;updated_at&quot;: &quot;2013-01-25T21:44:17Z&quot;
 }</pre>
 
         <h3>Params</h3>
@@ -203,7 +203,7 @@
            class='accordion-toggle'
            data-toggle='collapse'
            data-parent='#accordion'>
-            PUT /users/:id
+            PUT /api/v2/users/:id
           </a><br>
           <small>Update an user</small>
         </h2>
@@ -277,7 +277,7 @@
            class='accordion-toggle'
            data-toggle='collapse'
            data-parent='#accordion'>
-            DELETE /users/:id
+            DELETE /api/v2/users/:id
           </a><br>
           <small>Destroy an user</small>
         </h2>
