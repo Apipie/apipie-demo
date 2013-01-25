@@ -1,0 +1,172 @@
+--- !omap
+- tweets#create:
+  - !omap
+    - verb: :POST
+    - path: /users/980190962/tweets
+    - versions:
+      - '1.0'
+    - query: 
+    - request_data:
+        tweet:
+          scheduled_at: '2012-06-27 17:55:59 UTC'
+          sent: false
+          text: MyText
+          user_id: '980190962'
+    - response_data:
+        created_at: '2013-01-25T21:39:38Z'
+        id: 980190963
+        scheduled_at: '2012-06-27T17:55:59Z'
+        sent: false
+        text: MyText
+        updated_at: '2013-01-25T21:39:38Z'
+        user_id: 980190962
+    - code: '201'
+    - show_in_doc: 1
+    - recorded: true
+- tweets#destroy:
+  - !omap
+    - verb: :DELETE
+    - path: /users/980190962/tweets/980190962
+    - versions:
+      - '1.0'
+    - query: ''
+    - request_data: 
+    - response_data: 
+    - code: '204'
+    - show_in_doc: 1
+    - recorded: true
+- tweets#index:
+  - !omap
+    - verb: :GET
+    - path: /users/980190962/tweets
+    - versions:
+      - '1.0'
+    - query: ''
+    - request_data: 
+    - response_data:
+      - created_at: '2013-01-25T21:39:37Z'
+        id: 980190962
+        scheduled_at: '2012-06-27T17:55:59Z'
+        sent: false
+        text: MyText
+        updated_at: '2013-01-25T21:39:38Z'
+        user_id: 980190962
+    - code: '200'
+    - show_in_doc: 1
+    - recorded: true
+- tweets#show:
+  - !omap
+    - verb: :GET
+    - path: /users/980190962/tweets/980190962
+    - versions:
+      - '1.0'
+    - query: ''
+    - request_data: 
+    - response_data:
+        created_at: '2013-01-25T21:39:37Z'
+        id: 980190962
+        scheduled_at: '2012-06-27T17:55:59Z'
+        sent: false
+        text: MyText
+        updated_at: '2013-01-25T21:39:38Z'
+        user_id: 980190962
+    - code: '200'
+    - show_in_doc: 1
+    - recorded: true
+- tweets#update:
+  - !omap
+    - verb: :PUT
+    - path: /users/980190962/tweets/980190962
+    - versions:
+      - '1.0'
+    - query: 
+    - request_data:
+        tweet:
+          scheduled_at: '2012-06-27 17:55:59 UTC'
+          sent: false
+          text: MyText
+          user_id: '980190962'
+    - response_data: 
+    - code: '204'
+    - show_in_doc: 1
+    - recorded: true
+- users#create:
+  - !omap
+    - verb: :POST
+    - path: /users
+    - versions:
+      - '1.0'
+    - query: 
+    - request_data:
+        user:
+          name: MyString
+    - response_data:
+        created_at: '2013-01-25T21:39:38Z'
+        id: 980190963
+        name: MyString
+        updated_at: '2013-01-25T21:39:38Z'
+    - code: '201'
+    - show_in_doc: 1
+    - recorded: true
+- users#destroy:
+  - !omap
+    - verb: :DELETE
+    - path: /users/980190962
+    - versions:
+      - '1.0'
+    - query: ''
+    - request_data: 
+    - response_data: 
+    - code: '204'
+    - show_in_doc: 1
+    - recorded: true
+- users#index:
+  - !omap
+    - verb: :GET
+    - path: /users
+    - versions:
+      - '1.0'
+    - query: ''
+    - request_data: 
+    - response_data:
+      - created_at: '2013-01-25T21:39:37Z'
+        id: 298486374
+        name: MyString
+        updated_at: '2013-01-25T21:39:37Z'
+      - created_at: '2013-01-25T21:39:37Z'
+        id: 980190962
+        name: MyString
+        updated_at: '2013-01-25T21:39:37Z'
+    - code: '200'
+    - show_in_doc: 1
+    - recorded: true
+- users#show:
+  - !omap
+    - verb: :GET
+    - path: /users/980190962
+    - versions:
+      - '1.0'
+    - query: ''
+    - request_data: 
+    - response_data:
+        created_at: '2013-01-25T21:39:37Z'
+        id: 980190962
+        name: MyString
+        updated_at: '2013-01-25T21:39:37Z'
+    - code: '200'
+    - show_in_doc: 1
+    - recorded: true
+- users#update:
+  - !omap
+    - verb: :PUT
+    - path: /users/980190962
+    - versions:
+      - '1.0'
+    - query: 
+    - request_data:
+        user:
+          name: MyString
+    - response_data: 
+    - code: '204'
+    - show_in_doc: 1
+    - recorded: true
