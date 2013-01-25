@@ -1,0 +1,505 @@
+  <h4><a href='#tweets'>Tweets</a></h4>
+  <ul>
+      <li><a href='#tweets-index'>index</a></li>
+      <li><a href='#tweets-show'>show</a></li>
+      <li><a href='#tweets-create'>create</a></li>
+      <li><a href='#tweets-update'>update</a></li>
+      <li><a href='#tweets-destroy'>destroy</a></li>
+  </ul>
+  <h4><a href='#users'>Users</a></h4>
+  <ul>
+      <li><a href='#users-index'>index</a></li>
+      <li><a href='#users-show'>show</a></li>
+      <li><a href='#users-create'>create</a></li>
+      <li><a href='#users-update'>update</a></li>
+      <li><a href='#users-destroy'>destroy</a></li>
+  </ul>
+
+
+
+  <hr/>
+
+  <div>
+    <h2 id="tweets">
+      <a href='#tweets'>Tweets</a><br>
+      <small></small>
+    </h2>
+  </div>
+
+
+  <div>
+
+      <hr/>
+
+      <h3 id="tweets-index">
+      <a href='#tweets'>Tweets</a> / <a href='#tweets-index'>index</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /users/:user_id/tweets
+            <br>
+            <small>List tweets</small>
+          </h4>
+      </div>
+
+      <div>
+        
+          <h4>Examples</h4>
+            <pre class="wiki">GET /users/980190962/tweets
+200
+[
+  {
+    &quot;created_at&quot;: &quot;2013-01-25T21:39:37Z&quot;,
+    &quot;id&quot;: 980190962,
+    &quot;scheduled_at&quot;: &quot;2012-06-27T17:55:59Z&quot;,
+    &quot;sent&quot;: false,
+    &quot;text&quot;: &quot;MyText&quot;,
+    &quot;updated_at&quot;: &quot;2013-01-25T21:39:38Z&quot;,
+    &quot;user_id&quot;: 980190962
+  }
+]</pre>
+
+
+      </div>
+      <hr/>
+
+      <h3 id="tweets-show">
+      <a href='#tweets'>Tweets</a> / <a href='#tweets-show'>show</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /users/:user_id/tweets/:id
+            <br>
+            <small>Show a tweet</small>
+          </h4>
+      </div>
+
+      <div>
+        
+          <h4>Examples</h4>
+            <pre class="wiki">GET /users/980190962/tweets/980190962
+200
+{
+  &quot;created_at&quot;: &quot;2013-01-25T21:39:37Z&quot;,
+  &quot;id&quot;: 980190962,
+  &quot;scheduled_at&quot;: &quot;2012-06-27T17:55:59Z&quot;,
+  &quot;sent&quot;: false,
+  &quot;text&quot;: &quot;MyText&quot;,
+  &quot;updated_at&quot;: &quot;2013-01-25T21:39:38Z&quot;,
+  &quot;user_id&quot;: 980190962
+}</pre>
+
+
+      </div>
+      <hr/>
+
+      <h3 id="tweets-create">
+      <a href='#tweets'>Tweets</a> / <a href='#tweets-create'>create</a>
+      </h3>
+
+      <div>
+          <h4>
+              POST /users/:user_id/tweets
+            <br>
+            <small>Create a tweet</small>
+          </h4>
+      </div>
+
+      <div>
+        
+          <h4>Examples</h4>
+            <pre class="wiki">POST /users/980190962/tweets
+{
+  &quot;tweet&quot;: {
+    &quot;scheduled_at&quot;: &quot;2012-06-27 17:55:59 UTC&quot;,
+    &quot;sent&quot;: false,
+    &quot;text&quot;: &quot;MyText&quot;,
+    &quot;user_id&quot;: &quot;980190962&quot;
+  }
+}
+201
+{
+  &quot;created_at&quot;: &quot;2013-01-25T21:39:38Z&quot;,
+  &quot;id&quot;: 980190963,
+  &quot;scheduled_at&quot;: &quot;2012-06-27T17:55:59Z&quot;,
+  &quot;sent&quot;: false,
+  &quot;text&quot;: &quot;MyText&quot;,
+  &quot;updated_at&quot;: &quot;2013-01-25T21:39:38Z&quot;,
+  &quot;user_id&quot;: 980190962
+}</pre>
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>tweet </strong>:
+      <small>
+        optional
+        
+          [ Must be a Hash ]
+      </small>
+      
+    </li>
+    <ul>
+    <li>
+      <strong>scheduled_at </strong>:
+      <small>
+        optional
+        
+      </small>
+      
+    </li>
+    
+    <li>
+      <strong>sent </strong>:
+      <small>
+        optional
+        
+          [ Must be 'true' or 'false' ]
+      </small>
+      
+    </li>
+    
+    <li>
+      <strong>text </strong>:
+      <small>
+        optional
+        
+      </small>
+      
+    </li>
+    
+    <li>
+      <strong>user_id </strong>:
+      <small>
+        optional
+        
+          [ Must be a number. ]
+      </small>
+      
+    </li>
+    
+</ul>
+
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="tweets-update">
+      <a href='#tweets'>Tweets</a> / <a href='#tweets-update'>update</a>
+      </h3>
+
+      <div>
+          <h4>
+              PUT /users/:user_id/tweets/:id
+            <br>
+            <small>Update a tweet</small>
+          </h4>
+      </div>
+
+      <div>
+        
+          <h4>Examples</h4>
+            <pre class="wiki">PUT /users/980190962/tweets/980190962
+{
+  &quot;tweet&quot;: {
+    &quot;scheduled_at&quot;: &quot;2012-06-27 17:55:59 UTC&quot;,
+    &quot;sent&quot;: false,
+    &quot;text&quot;: &quot;MyText&quot;,
+    &quot;user_id&quot;: &quot;980190962&quot;
+  }
+}
+204</pre>
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>tweet </strong>:
+      <small>
+        optional
+        
+          [ Must be a Hash ]
+      </small>
+      
+    </li>
+    <ul>
+    <li>
+      <strong>scheduled_at </strong>:
+      <small>
+        optional
+        
+      </small>
+      
+    </li>
+    
+    <li>
+      <strong>sent </strong>:
+      <small>
+        optional
+        
+          [ Must be 'true' or 'false' ]
+      </small>
+      
+    </li>
+    
+    <li>
+      <strong>text </strong>:
+      <small>
+        optional
+        
+      </small>
+      
+    </li>
+    
+    <li>
+      <strong>user_id </strong>:
+      <small>
+        optional
+        
+          [ Must be a number. ]
+      </small>
+      
+    </li>
+    
+</ul>
+
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="tweets-destroy">
+      <a href='#tweets'>Tweets</a> / <a href='#tweets-destroy'>destroy</a>
+      </h3>
+
+      <div>
+          <h4>
+              DELETE /users/:user_id/tweets/:id
+            <br>
+            <small>Destroy a tweet</small>
+          </h4>
+      </div>
+
+      <div>
+        
+          <h4>Examples</h4>
+            <pre class="wiki">DELETE /users/980190962/tweets/980190962
+204</pre>
+
+
+      </div>
+  </div>
+
+  <hr/>
+
+  <div>
+    <h2 id="users">
+      <a href='#users'>Users</a><br>
+      <small></small>
+    </h2>
+  </div>
+
+
+  <div>
+
+      <hr/>
+
+      <h3 id="users-index">
+      <a href='#users'>Users</a> / <a href='#users-index'>index</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /users
+            <br>
+            <small>List users</small>
+          </h4>
+      </div>
+
+      <div>
+        
+          <h4>Examples</h4>
+            <pre class="wiki">GET /users
+200
+[
+  {
+    &quot;created_at&quot;: &quot;2013-01-25T21:39:37Z&quot;,
+    &quot;id&quot;: 298486374,
+    &quot;name&quot;: &quot;MyString&quot;,
+    &quot;updated_at&quot;: &quot;2013-01-25T21:39:37Z&quot;
+  },
+  {
+    &quot;created_at&quot;: &quot;2013-01-25T21:39:37Z&quot;,
+    &quot;id&quot;: 980190962,
+    &quot;name&quot;: &quot;MyString&quot;,
+    &quot;updated_at&quot;: &quot;2013-01-25T21:39:37Z&quot;
+  }
+]</pre>
+
+
+      </div>
+      <hr/>
+
+      <h3 id="users-show">
+      <a href='#users'>Users</a> / <a href='#users-show'>show</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /users/:id
+            <br>
+            <small>Show an user</small>
+          </h4>
+      </div>
+
+      <div>
+        
+          <h4>Examples</h4>
+            <pre class="wiki">GET /users/980190962
+200
+{
+  &quot;created_at&quot;: &quot;2013-01-25T21:39:37Z&quot;,
+  &quot;id&quot;: 980190962,
+  &quot;name&quot;: &quot;MyString&quot;,
+  &quot;updated_at&quot;: &quot;2013-01-25T21:39:37Z&quot;
+}</pre>
+
+
+      </div>
+      <hr/>
+
+      <h3 id="users-create">
+      <a href='#users'>Users</a> / <a href='#users-create'>create</a>
+      </h3>
+
+      <div>
+          <h4>
+              POST /users
+            <br>
+            <small>Create an user</small>
+          </h4>
+      </div>
+
+      <div>
+        
+          <h4>Examples</h4>
+            <pre class="wiki">POST /users
+{
+  &quot;user&quot;: {
+    &quot;name&quot;: &quot;MyString&quot;
+  }
+}
+201
+{
+  &quot;created_at&quot;: &quot;2013-01-25T21:39:38Z&quot;,
+  &quot;id&quot;: 980190963,
+  &quot;name&quot;: &quot;MyString&quot;,
+  &quot;updated_at&quot;: &quot;2013-01-25T21:39:38Z&quot;
+}</pre>
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>user </strong>:
+      <small>
+        optional
+        
+          [ Must be a Hash ]
+      </small>
+      
+    </li>
+    <ul>
+    <li>
+      <strong>name </strong>:
+      <small>
+        optional
+        
+      </small>
+      
+    </li>
+    
+</ul>
+
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="users-update">
+      <a href='#users'>Users</a> / <a href='#users-update'>update</a>
+      </h3>
+
+      <div>
+          <h4>
+              PUT /users/:id
+            <br>
+            <small>Update an user</small>
+          </h4>
+      </div>
+
+      <div>
+        
+          <h4>Examples</h4>
+            <pre class="wiki">PUT /users/980190962
+{
+  &quot;user&quot;: {
+    &quot;name&quot;: &quot;MyString&quot;
+  }
+}
+204</pre>
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>user </strong>:
+      <small>
+        optional
+        
+          [ Must be a Hash ]
+      </small>
+      
+    </li>
+    <ul>
+    <li>
+      <strong>name </strong>:
+      <small>
+        optional
+        
+      </small>
+      
+    </li>
+    
+</ul>
+
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="users-destroy">
+      <a href='#users'>Users</a> / <a href='#users-destroy'>destroy</a>
+      </h3>
+
+      <div>
+          <h4>
+              DELETE /users/:id
+            <br>
+            <small>Destroy an user</small>
+          </h4>
+      </div>
+
+      <div>
+        
+          <h4>Examples</h4>
+            <pre class="wiki">DELETE /users/980190962
+204</pre>
+
+
+      </div>
+  </div>
