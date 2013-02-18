@@ -1,6 +1,5 @@
 module V2
   class UsersController < BaseController
-    # DOC GENERATED AUTOMATICALLY: REMOVE THIS LINE TO PREVENT REGENARATING NEXT TIME
     api :GET, "/v2/users", "List users"
     def index
       @users = User.all
@@ -8,7 +7,6 @@ module V2
       render json: @users
     end
 
-    # DOC GENERATED AUTOMATICALLY: REMOVE THIS LINE TO PREVENT REGENARATING NEXT TIME
     api :GET, "/v2/users/:id", "Show an user"
     def show
       @user = User.find(params[:id])
@@ -16,11 +14,8 @@ module V2
       render json: @user
     end
 
-    # DOC GENERATED AUTOMATICALLY: REMOVE THIS LINE TO PREVENT REGENARATING NEXT TIME
     api :POST, "/v2/users", "Create an user"
-    param :user, Hash do
-      param :name, :undef
-    end
+    param_group :user, V1::UsersController
     def create
       @user = User.new(params[:user])
 
@@ -31,11 +26,8 @@ module V2
       end
     end
 
-    # DOC GENERATED AUTOMATICALLY: REMOVE THIS LINE TO PREVENT REGENARATING NEXT TIME
     api :PUT, "/v2/users/:id", "Update an user"
-    param :user, Hash do
-      param :name, :undef
-    end
+    param_group :user, V1::UsersController
     def update
       @user = User.find(params[:id])
 
@@ -46,7 +38,6 @@ module V2
       end
     end
 
-    # DOC GENERATED AUTOMATICALLY: REMOVE THIS LINE TO PREVENT REGENARATING NEXT TIME
     api :DELETE, "/v2/users/:id", "Destroy an user"
     def destroy
       @user = User.find(params[:id])

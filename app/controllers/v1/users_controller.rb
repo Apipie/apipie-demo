@@ -1,6 +1,18 @@
 module V1
   class UsersController < BaseController
-    # DOC GENERATED AUTOMATICALLY: REMOVE THIS LINE TO PREVENT REGENARATING NEXT TIME
+    def_param_group :address do
+      param :street, String, "Street name"
+      param :number, Integer
+      param :zip, String
+    end
+
+    def_param_group :user do
+      param :user, Hash, :required => true, :action_aware => true do
+        param :name, String, "Name of the user", :required => true
+        param_group :address
+      end
+    end
+
     api :GET, "/users", "List users"
     def index
       @users = User.all
@@ -8,7 +20,6 @@ module V1
       render json: @users
     end
 
-    # DOC GENERATED AUTOMATICALLY: REMOVE THIS LINE TO PREVENT REGENARATING NEXT TIME
     api :GET, "/users/:id", "Show an user"
     def show
       @user = User.find(params[:id])
@@ -16,11 +27,8 @@ module V1
       render json: @user
     end
 
-    # DOC GENERATED AUTOMATICALLY: REMOVE THIS LINE TO PREVENT REGENARATING NEXT TIME
     api :POST, "/users", "Create an user"
-    param :user, Hash do
-      param :name, :undef
-    end
+    param_group :user
     def create
       @user = User.new(params[:user])
 
@@ -31,11 +39,8 @@ module V1
       end
     end
 
-    # DOC GENERATED AUTOMATICALLY: REMOVE THIS LINE TO PREVENT REGENARATING NEXT TIME
     api :PUT, "/users/:id", "Update an user"
-    param :user, Hash do
-      param :name, :undef
-    end
+    param_group :user
     def update
       @user = User.find(params[:id])
 
@@ -46,7 +51,6 @@ module V1
       end
     end
 
-    # DOC GENERATED AUTOMATICALLY: REMOVE THIS LINE TO PREVENT REGENARATING NEXT TIME
     api :DELETE, "/users/:id", "Destroy an user"
     def destroy
       @user = User.find(params[:id])

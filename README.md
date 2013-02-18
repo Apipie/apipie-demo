@@ -107,7 +107,7 @@ def_param_group :address do
 end
 
 def_param_group :user do
-  param :user, Hash do
+  param :user, Hash, :required => true, :action_aware => true do
     param :name, String, "Name of the user"
     param_group :address
   end
