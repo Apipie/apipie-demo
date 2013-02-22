@@ -3,12 +3,6 @@
 This is a sample Rails application demonstrating the features of the
 [Apipie](http://github.com/Pajk/apipie-rails) gem.
 
-You can either follow the instructions below or `git log
-origin/result` to see the progress.
-
-You can see the final state of the app after the tutorial in the
-`result` branch.
-
 For more information see the documentation for the Apipie gem.
 
 ### Getting started
