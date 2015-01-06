@@ -2,24 +2,21 @@ module V1
   class TweetsController < ApplicationController
     before_filter :find_user
 
-    # DOC GENERATED AUTOMATICALLY: REMOVE THIS LINE TO PREVENT REGENARATING NEXT TIME
-    api :GET, "/v1/users/:user_id/tweets", "List tweets"
+    api!
     def index
       @tweets = @user.tweets.all
 
       render json: @tweets
     end
 
-    # DOC GENERATED AUTOMATICALLY: REMOVE THIS LINE TO PREVENT REGENARATING NEXT TIME
-    api :GET, "/v1/users/:user_id/tweets/:id", "Show a tweet"
+    api!
     def show
       @tweet = @user.tweets.find(params[:id])
 
       render json: @tweet
     end
 
-    # DOC GENERATED AUTOMATICALLY: REMOVE THIS LINE TO PREVENT REGENARATING NEXT TIME
-    api :POST, "/v1/users/:user_id/tweets", "Create a tweet"
+    api!
     param :tweet, Hash do
       param :scheduled_at, :undef
       param :sent, :bool
@@ -36,8 +33,7 @@ module V1
       end
     end
 
-    # DOC GENERATED AUTOMATICALLY: REMOVE THIS LINE TO PREVENT REGENARATING NEXT TIME
-    api :PUT, "/v1/users/:user_id/tweets/:id", "Update a tweet"
+    api!
     param :tweet, Hash do
       param :scheduled_at, :undef
       param :sent, :bool
@@ -54,8 +50,7 @@ module V1
       end
     end
 
-    # DOC GENERATED AUTOMATICALLY: REMOVE THIS LINE TO PREVENT REGENARATING NEXT TIME
-    api :DELETE, "/v1/users/:user_id/tweets/:id", "Destroy a tweet"
+    api!
     def destroy
       @tweet = @user.tweets.find(params[:id])
       @tweet.destroy

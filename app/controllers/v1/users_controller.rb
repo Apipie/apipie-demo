@@ -13,21 +13,21 @@ module V1
       end
     end
 
-    api :GET, "/users", "List users"
+    api!
     def index
       @users = User.all
 
       render json: @users
     end
 
-    api :GET, "/users/:id", "Show an user"
+    api!
     def show
       @user = User.find(params[:id])
 
       render json: @user
     end
 
-    api :POST, "/users", "Create an user"
+    api!
     param_group :user
     def create
       @user = User.new(user_params)
@@ -39,7 +39,7 @@ module V1
       end
     end
 
-    api :PUT, "/users/:id", "Update an user"
+    api!
     param_group :user
     def update
       @user = User.find(params[:id])
@@ -51,7 +51,7 @@ module V1
       end
     end
 
-    api :DELETE, "/users/:id", "Destroy an user"
+    api!
     def destroy
       @user = User.find(params[:id])
       @user.destroy
