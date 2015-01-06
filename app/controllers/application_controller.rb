@@ -3,6 +3,6 @@ class ApplicationController < ActionController::API
 
   rescue_from ArgumentError do |e|
     render :json => {"ErrorType" => "Validation Error", "message" => e.message},
-           :code => :bad_request    
+           :code => :bad_request
   end
 end

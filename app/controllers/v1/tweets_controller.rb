@@ -27,7 +27,7 @@ module V1
       param :user_id, :number
     end
     def create
-      @tweet = @user.tweets.new(params[:tweet])
+      @tweet = @user.tweets.new(tweet_params)
 
       if @tweet.save
         render json: @tweet, status: :created, location: [@user, @tweet]
@@ -47,7 +47,7 @@ module V1
     def update
       @tweet = @user.tweets.find(params[:id])
 
-      if @tweet.update_attributes(params[:tweet])
+      if @tweet.update_attributes(tweet_params)
         head :no_content
       else
         render json: @tweet.errors, status: :unprocessable_entity
@@ -67,6 +67,10 @@ module V1
 
     def find_user
       @user = User.find_by_id(params[:user_id])
+    end
+
+    def tweet_params
+      params.require(:tweet).permit(:scheduled_at, :sent, :text, :user_id)
     end
   end
 end
