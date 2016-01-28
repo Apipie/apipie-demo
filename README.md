@@ -15,7 +15,7 @@ inside the users).
 To run this demo, you need to run Ruby 1.9.2 or higher (although the
 Apipie gem is compatible with 1.8.7).
 
-To get the app up and running run this commands:
+To get the app up and running run these commands:
 
     bundle install
     rake db:setup
@@ -52,10 +52,10 @@ into one place. And Apipie provides a way how to do it:
     APIPIE_RECORD=params rake test:functionals
     APIPIE_RECORD=examples rake test:functionals
 
-CONGRATULATION!!! You've just created the fist cut documentation of
+CONGRATULATION!!! You've just created the first cut documentation of
 your API.
 
-When we open the `TweetsController` we can see, that out of sudden
+When we open the `TweetsController` we can see, that out of a sudden
 there is a description of every action. And more then that: the tool
 also tried to recognize the type of params if possible (such as the
 `sent` param is `:bool`).
@@ -65,7 +65,7 @@ To see the output, just open `http://localhost:3000/apipie`.
 You might notice that besides the params descriptions there are also
 examples available in the documentation, although they are not in the
 source code. Apipie uses separate file `doc/apipie_examples.yml`.
-That make the code more readable (the examples can really be
+That makes the code more readable (the examples can really be
 disturbing) and also makes it easier to regenerate the examples again
 and again.
 
@@ -83,7 +83,7 @@ files (structured, one-page, plain html).
 
 You can specify the resource and/or an action to one or more versions.
 After that, you can see the documentation for all the versions. You
-can also generate static files for given version by running (in this
+can also generate static files for a given version by running (in this
 example version 2):
 
     rake apipie:static[2]
@@ -129,7 +129,7 @@ end
 
 ### Conclusion
 
-We've just went through the basic scenarios that are covered by the
+We've just gone through the basic scenarios that are covered by the
 Apipie gem. I hope you've liked it. For more information see the
 documentation for the gem. There are other features you might be
 interested in, such as:
