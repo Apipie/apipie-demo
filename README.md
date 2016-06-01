@@ -25,12 +25,12 @@ To test that it works we can use `curl` to see it working:
 
     curl -H "Content-Type: application/json" -X POST\
          -d '{"user":{"name":"admin"}}'\
-          http://localhost:3000/users
+          http://localhost:3000/api/v1/users
 
     curl -H "Content-Type: application/json" -X POST\
          -d '{"tweet":{"text":"Hurray, I've survived",
                        "scheduled_at":"2012-12-22T01:00"}}'\
-          http://localhost:3000/users/1/tweets
+          http://localhost:3000/api/v1/users/1/tweets
 
 ### Api Doc In 1 Minute
 
