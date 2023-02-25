@@ -1,6 +1,6 @@
 module V2
   class TweetsController < BaseController
-    before_filter :find_user
+    before_action :find_user
 
     api!
     def index
