@@ -37,28 +37,14 @@
 
       <div>
           <h4>
-              GET /api/v2/users/:user_id/tweets
+              GET /api/v1/users/:user_id/tweets
             <br>
-            <small>List tweets</small>
+            <small></small>
           </h4>
       </div>
 
       <div>
         
-          <h4>Examples</h4>
-            <pre class="wiki">GET /users/980190962/tweets
-200
-[
-  {
-    &quot;created_at&quot;: &quot;2013-01-25T21:44:16Z&quot;,
-    &quot;id&quot;: 980190962,
-    &quot;scheduled_at&quot;: &quot;2012-06-27T17:55:59Z&quot;,
-    &quot;sent&quot;: false,
-    &quot;text&quot;: &quot;MyText&quot;,
-    &quot;updated_at&quot;: &quot;2013-01-25T21:44:17Z&quot;,
-    &quot;user_id&quot;: 980190962
-  }
-]</pre>
 
 
       </div>
@@ -70,26 +56,14 @@
 
       <div>
           <h4>
-              GET /api/v2/users/:user_id/tweets/:id
+              GET /api/v1/users/:user_id/tweets/:id
             <br>
-            <small>Show a tweet</small>
+            <small></small>
           </h4>
       </div>
 
       <div>
         
-          <h4>Examples</h4>
-            <pre class="wiki">GET /users/980190962/tweets/980190962
-200
-{
-  &quot;created_at&quot;: &quot;2013-01-25T21:44:16Z&quot;,
-  &quot;id&quot;: 980190962,
-  &quot;scheduled_at&quot;: &quot;2012-06-27T17:55:59Z&quot;,
-  &quot;sent&quot;: false,
-  &quot;text&quot;: &quot;MyText&quot;,
-  &quot;updated_at&quot;: &quot;2013-01-25T21:44:17Z&quot;,
-  &quot;user_id&quot;: 980190962
-}</pre>
 
 
       </div>
@@ -101,34 +75,14 @@
 
       <div>
           <h4>
-              POST /api/v2/users/:user_id/tweets
+              POST /api/v1/users/:user_id/tweets
             <br>
-            <small>Create a tweet</small>
+            <small></small>
           </h4>
       </div>
 
       <div>
         
-          <h4>Examples</h4>
-            <pre class="wiki">POST /users/980190962/tweets
-{
-  &quot;tweet&quot;: {
-    &quot;scheduled_at&quot;: &quot;2012-06-27 17:55:59 UTC&quot;,
-    &quot;sent&quot;: false,
-    &quot;text&quot;: &quot;MyText&quot;,
-    &quot;user_id&quot;: &quot;980190962&quot;
-  }
-}
-201
-{
-  &quot;created_at&quot;: &quot;2013-01-25T21:44:17Z&quot;,
-  &quot;id&quot;: 980190963,
-  &quot;scheduled_at&quot;: &quot;2012-06-27T17:55:59Z&quot;,
-  &quot;sent&quot;: false,
-  &quot;text&quot;: &quot;MyText&quot;,
-  &quot;updated_at&quot;: &quot;2013-01-25T21:44:17Z&quot;,
-  &quot;user_id&quot;: 980190962
-}</pre>
 
 
           <h4>Params</h4>
@@ -138,7 +92,9 @@
       <small>
         optional
         
-          [ Must be a Hash ]
+          [ 
+<p>Must be a Hash</p>
+ ]
       </small>
       
     </li>
@@ -157,7 +113,9 @@
       <small>
         optional
         
-          [ Must be 'true' or 'false' ]
+          [ 
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+ ]
       </small>
       
     </li>
@@ -176,7 +134,9 @@
       <small>
         optional
         
-          [ Must be a number. ]
+          [ 
+<p>Must be a number.</p>
+ ]
       </small>
       
     </li>
@@ -194,25 +154,19 @@
 
       <div>
           <h4>
-              PUT /api/v2/users/:user_id/tweets/:id
+              PATCH /api/v1/users/:user_id/tweets/:id
             <br>
-            <small>Update a tweet</small>
+            <small></small>
+          </h4>
+          <h4>
+              PUT /api/v1/users/:user_id/tweets/:id
+            <br>
+            <small></small>
           </h4>
       </div>
 
       <div>
         
-          <h4>Examples</h4>
-            <pre class="wiki">PUT /users/980190962/tweets/980190962
-{
-  &quot;tweet&quot;: {
-    &quot;scheduled_at&quot;: &quot;2012-06-27 17:55:59 UTC&quot;,
-    &quot;sent&quot;: false,
-    &quot;text&quot;: &quot;MyText&quot;,
-    &quot;user_id&quot;: &quot;980190962&quot;
-  }
-}
-204</pre>
 
 
           <h4>Params</h4>
@@ -222,7 +176,9 @@
       <small>
         optional
         
-          [ Must be a Hash ]
+          [ 
+<p>Must be a Hash</p>
+ ]
       </small>
       
     </li>
@@ -241,7 +197,9 @@
       <small>
         optional
         
-          [ Must be 'true' or 'false' ]
+          [ 
+<p>Must be one of: <code>true</code>, <code>false</code>, <code>1</code>, <code>0</code>.</p>
+ ]
       </small>
       
     </li>
@@ -260,7 +218,9 @@
       <small>
         optional
         
-          [ Must be a number. ]
+          [ 
+<p>Must be a number.</p>
+ ]
       </small>
       
     </li>
@@ -278,17 +238,14 @@
 
       <div>
           <h4>
-              DELETE /api/v2/users/:user_id/tweets/:id
+              DELETE /api/v1/users/:user_id/tweets/:id
             <br>
-            <small>Destroy a tweet</small>
+            <small></small>
           </h4>
       </div>
 
       <div>
         
-          <h4>Examples</h4>
-            <pre class="wiki">DELETE /users/980190962/tweets/980190962
-204</pre>
 
 
       </div>
@@ -314,31 +271,14 @@
 
       <div>
           <h4>
-              GET /api/v2/users
+              GET /api/v1/users
             <br>
-            <small>List users</small>
+            <small></small>
           </h4>
       </div>
 
       <div>
         
-          <h4>Examples</h4>
-            <pre class="wiki">GET /users
-200
-[
-  {
-    &quot;created_at&quot;: &quot;2013-01-25T21:44:16Z&quot;,
-    &quot;id&quot;: 298486374,
-    &quot;name&quot;: &quot;MyString&quot;,
-    &quot;updated_at&quot;: &quot;2013-01-25T21:44:16Z&quot;
-  },
-  {
-    &quot;created_at&quot;: &quot;2013-01-25T21:44:16Z&quot;,
-    &quot;id&quot;: 980190962,
-    &quot;name&quot;: &quot;MyString&quot;,
-    &quot;updated_at&quot;: &quot;2013-01-25T21:44:16Z&quot;
-  }
-]</pre>
 
 
       </div>
@@ -350,23 +290,14 @@
 
       <div>
           <h4>
-              GET /api/v2/users/:id
+              GET /api/v1/users/:id
             <br>
-            <small>Show an user</small>
+            <small></small>
           </h4>
       </div>
 
       <div>
         
-          <h4>Examples</h4>
-            <pre class="wiki">GET /users/980190962
-200
-{
-  &quot;created_at&quot;: &quot;2013-01-25T21:44:16Z&quot;,
-  &quot;id&quot;: 980190962,
-  &quot;name&quot;: &quot;MyString&quot;,
-  &quot;updated_at&quot;: &quot;2013-01-25T21:44:16Z&quot;
-}</pre>
 
 
       </div>
@@ -378,28 +309,14 @@
 
       <div>
           <h4>
-              POST /api/v2/users
+              POST /api/v1/users
             <br>
-            <small>Create an user</small>
+            <small></small>
           </h4>
       </div>
 
       <div>
         
-          <h4>Examples</h4>
-            <pre class="wiki">POST /users
-{
-  &quot;user&quot;: {
-    &quot;name&quot;: &quot;MyString&quot;
-  }
-}
-201
-{
-  &quot;created_at&quot;: &quot;2013-01-25T21:44:17Z&quot;,
-  &quot;id&quot;: 980190963,
-  &quot;name&quot;: &quot;MyString&quot;,
-  &quot;updated_at&quot;: &quot;2013-01-25T21:44:17Z&quot;
-}</pre>
 
 
           <h4>Params</h4>
@@ -407,9 +324,11 @@
     <li>
       <strong>user </strong>:
       <small>
-        optional
+        required
         
-          [ Must be a Hash ]
+          [ 
+<p>Must be a Hash</p>
+ ]
       </small>
       
     </li>
@@ -417,8 +336,51 @@
     <li>
       <strong>name </strong>:
       <small>
-        optional
+        required
         
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Name of the user</p>
+
+    </li>
+    
+    <li>
+      <strong>street </strong>:
+      <small>
+        optional
+        , nil allowed
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Street name</p>
+
+    </li>
+    
+    <li>
+      <strong>number </strong>:
+      <small>
+        optional
+        , nil allowed
+          [ 
+<p>Must be a Integer</p>
+ ]
+      </small>
+      
+    </li>
+    
+    <li>
+      <strong>zip </strong>:
+      <small>
+        optional
+        , nil allowed
+          [ 
+<p>Must be a String</p>
+ ]
       </small>
       
     </li>
@@ -436,22 +398,19 @@
 
       <div>
           <h4>
-              PUT /api/v2/users/:id
+              PATCH /api/v1/users/:id
             <br>
-            <small>Update an user</small>
+            <small></small>
+          </h4>
+          <h4>
+              PUT /api/v1/users/:id
+            <br>
+            <small></small>
           </h4>
       </div>
 
       <div>
         
-          <h4>Examples</h4>
-            <pre class="wiki">PUT /users/980190962
-{
-  &quot;user&quot;: {
-    &quot;name&quot;: &quot;MyString&quot;
-  }
-}
-204</pre>
 
 
           <h4>Params</h4>
@@ -459,9 +418,11 @@
     <li>
       <strong>user </strong>:
       <small>
-        optional
+        required
         
-          [ Must be a Hash ]
+          [ 
+<p>Must be a Hash</p>
+ ]
       </small>
       
     </li>
@@ -471,6 +432,49 @@
       <small>
         optional
         
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Name of the user</p>
+
+    </li>
+    
+    <li>
+      <strong>street </strong>:
+      <small>
+        optional
+        , nil allowed
+          [ 
+<p>Must be a String</p>
+ ]
+      </small>
+      
+<p>Street name</p>
+
+    </li>
+    
+    <li>
+      <strong>number </strong>:
+      <small>
+        optional
+        , nil allowed
+          [ 
+<p>Must be a Integer</p>
+ ]
+      </small>
+      
+    </li>
+    
+    <li>
+      <strong>zip </strong>:
+      <small>
+        optional
+        , nil allowed
+          [ 
+<p>Must be a String</p>
+ ]
       </small>
       
     </li>
@@ -488,17 +492,14 @@
 
       <div>
           <h4>
-              DELETE /api/v2/users/:id
+              DELETE /api/v1/users/:id
             <br>
-            <small>Destroy an user</small>
+            <small></small>
           </h4>
       </div>
 
       <div>
         
-          <h4>Examples</h4>
-            <pre class="wiki">DELETE /users/980190962
-204</pre>
 
 
       </div>
