@@ -48,5 +48,7 @@ module Demo
     # config.active_record.schema_format = :sql
 
     config.active_support.test_order = :random
+
+    config.active_record.legacy_connection_handling = false
   end
 end
