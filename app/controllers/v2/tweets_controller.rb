@@ -1,6 +1,6 @@
 module V2
   class TweetsController < BaseController
-    before_filter :find_user
+    before_action :find_user
 
     api!
     def index
@@ -43,7 +43,7 @@ module V2
     def update
       @tweet = @user.tweets.find(params[:id])
 
-      if @tweet.update_attributes(tweet_params)
+      if @tweet.update(tweet_params)
         head :no_content
       else
         render json: @tweet.errors, status: :unprocessable_entity

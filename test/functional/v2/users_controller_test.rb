@@ -14,25 +14,25 @@ module V2
 
     test "should create user" do
       assert_difference('User.count') do
-        post :create, user: { name: @user.name }
+        post :create, params: { user: { name: @user.name } }
       end
 
       assert_response 201
     end
 
     test "should show user" do
-      get :show, id: @user
+      get :show, params: { id: @user.id }
       assert_response :success
     end
 
     test "should update user" do
-      put :update, id: @user, user: { name: @user.name }
+      put :update, params: { id: @user.id, user: { name: @user.name } }
       assert_response 204
     end
 
     test "should destroy user" do
       assert_difference('User.count', -1) do
-        delete :destroy, id: @user
+        delete :destroy, params: { id: @user }
       end
 
       assert_response 204

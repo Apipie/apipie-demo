@@ -3,31 +3,36 @@
 <head>
   <title>API documentation</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link type='text/css' rel='stylesheet' href='./apidoc/stylesheets/bundled/bootstrap.min.css'/>
 <link type='text/css' rel='stylesheet' href='./apidoc/stylesheets/bundled/prettify.css'/>
 <link type='text/css' rel='stylesheet' href='./apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
   <link type='text/css' rel='stylesheet' href='./apidoc/stylesheets/application.css'/>
   <!-- IE6-8 support of HTML5 elements -->
   <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 </head>
 <body>
-  <div class="container">
-    <div class="row">
+  <div class="container-fluid">
+    <div class="row-fluid">
       <div id='container'>
         <ul class='breadcrumb'>
-  <li class='active'><a href='./apidoc.html'>Demo 2</a></li>
+  <li class='active'><a href='./apidoc.html'>Demo 1</a></li>
+  
 </ul>
 
-<div>Another API description</div>
+<div>
+<p>Another API description</p>
+</div>
 
 <h1 class='page-header'>Resources</h1>
 
   <h2>
     <a href='./apidoc/tweets.html'>
       Tweets
-    </a><br>
+    </a>
+    <br>
     <small></small>
   </h2>
   <table class='table'>
@@ -39,31 +44,48 @@
     </thead>
     <tbody>
           <tr>
-            <td><a href='./apidoc/tweets/index.html'>GET /api/v2/users/:user_id/tweets</a></td>
-            <td width='60%'>List tweets</td>
+            <td>
+              <a href='./apidoc/tweets/index.html'>GET /api/v1/users/:user_id/tweets</a>
+            </td>
+            <td width='60%'></td>
           </tr>
           <tr>
-            <td><a href='./apidoc/tweets/show.html'>GET /api/v2/users/:user_id/tweets/:id</a></td>
-            <td width='60%'>Show a tweet</td>
+            <td>
+              <a href='./apidoc/tweets/show.html'>GET /api/v1/users/:user_id/tweets/:id</a>
+            </td>
+            <td width='60%'></td>
           </tr>
           <tr>
-            <td><a href='./apidoc/tweets/create.html'>POST /api/v2/users/:user_id/tweets</a></td>
-            <td width='60%'>Create a tweet</td>
+            <td>
+              <a href='./apidoc/tweets/create.html'>POST /api/v1/users/:user_id/tweets</a>
+            </td>
+            <td width='60%'></td>
           </tr>
           <tr>
-            <td><a href='./apidoc/tweets/update.html'>PUT /api/v2/users/:user_id/tweets/:id</a></td>
-            <td width='60%'>Update a tweet</td>
+            <td>
+              <a href='./apidoc/tweets/update.html'>PATCH /api/v1/users/:user_id/tweets/:id</a>
+            </td>
+            <td width='60%'></td>
           </tr>
           <tr>
-            <td><a href='./apidoc/tweets/destroy.html'>DELETE /api/v2/users/:user_id/tweets/:id</a></td>
-            <td width='60%'>Destroy a tweet</td>
+            <td>
+              <a href='./apidoc/tweets/update.html'>PUT /api/v1/users/:user_id/tweets/:id</a>
+            </td>
+            <td width='60%'></td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/tweets/destroy.html'>DELETE /api/v1/users/:user_id/tweets/:id</a>
+            </td>
+            <td width='60%'></td>
           </tr>
     </tbody>
   </table>
   <h2>
     <a href='./apidoc/users.html'>
       Users
-    </a><br>
+    </a>
+    <br>
     <small></small>
   </h2>
   <table class='table'>
@@ -75,24 +97,40 @@
     </thead>
     <tbody>
           <tr>
-            <td><a href='./apidoc/users/index.html'>GET /api/v2/users</a></td>
-            <td width='60%'>List users</td>
+            <td>
+              <a href='./apidoc/users/index.html'>GET /api/v1/users</a>
+            </td>
+            <td width='60%'></td>
           </tr>
           <tr>
-            <td><a href='./apidoc/users/show.html'>GET /api/v2/users/:id</a></td>
-            <td width='60%'>Show an user</td>
+            <td>
+              <a href='./apidoc/users/show.html'>GET /api/v1/users/:id</a>
+            </td>
+            <td width='60%'></td>
           </tr>
           <tr>
-            <td><a href='./apidoc/users/create.html'>POST /api/v2/users</a></td>
-            <td width='60%'>Create an user</td>
+            <td>
+              <a href='./apidoc/users/create.html'>POST /api/v1/users</a>
+            </td>
+            <td width='60%'></td>
           </tr>
           <tr>
-            <td><a href='./apidoc/users/update.html'>PUT /api/v2/users/:id</a></td>
-            <td width='60%'>Update an user</td>
+            <td>
+              <a href='./apidoc/users/update.html'>PATCH /api/v1/users/:id</a>
+            </td>
+            <td width='60%'></td>
           </tr>
           <tr>
-            <td><a href='./apidoc/users/destroy.html'>DELETE /api/v2/users/:id</a></td>
-            <td width='60%'>Destroy an user</td>
+            <td>
+              <a href='./apidoc/users/update.html'>PUT /api/v1/users/:id</a>
+            </td>
+            <td width='60%'></td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/users/destroy.html'>DELETE /api/v1/users/:id</a>
+            </td>
+            <td width='60%'></td>
           </tr>
     </tbody>
   </table>
@@ -102,10 +140,9 @@
       </div>
     </div>
     <hr>
-    <footer>  
-</footer>
+    <footer></footer>
   </div>
-  <script type='text/javascript' src='./apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+  <script type='text/javascript' src='./apidoc/javascripts/bundled/jquery.js'></script>
 <script type='text/javascript' src='./apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
 <script type='text/javascript' src='./apidoc/javascripts/bundled/prettify.js'></script>
 <script type='text/javascript' src='./apidoc/javascripts/apipie.js'></script>
